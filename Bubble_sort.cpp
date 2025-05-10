@@ -18,13 +18,16 @@
 
 #include<iostream>
 using namespace std;
-void showdata(int a[]){
-    for (int i=0;i<6;i++){
+void showdata(int a[])
+{
+    for (int i=0;i<6;i++)
+    {
         a[i]=a[i]+2;
         cout<<a[i]<<endl;
-    }
-}
-int main(){
+    }                                //...array function is a call by reference by default 
+}                                    //...array carry the same adress by call by refrence 
+int main()
+{
     int arr[6]={7,3,5,8,6,9};
     showdata(arr);
     {

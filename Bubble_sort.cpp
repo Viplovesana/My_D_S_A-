@@ -42,24 +42,63 @@
 //................................BUBBLE Sort in array assending..........................//
 
 
+// #include<iostream>
+// using namespace std;
+// void bubble(int arr[],int s){
+//     int temp;
+//     for(int i=0;i<s;i++){
+//         for(int j=0;j<s-1;j++){
+//             if(arr[j]>arr[j+1]){
+//                 temp=arr[j+1];      
+//                 arr[j+1]=arr[j];
+//                 arr[j]=temp;
+//             }
+//         }
+//     }
+// }
+// int main(){
+//     int arr[5]={7,2,9,6,4};
+//     bubble(arr,5);
+//     for(int i=0;i<5;i++){
+//         cout<<arr[i]<<endl;
+//     }
+// }
+
+
+
+//...............BUBBLE sort code optimization................................///
+
 #include<iostream>
 using namespace std;
 void bubble(int arr[],int s){
-    int temp;
+    int temp,c=0;
+    bool v;
+
     for(int i=0;i<s;i++){
-        for(int j=0;j<s-1;j++){
-            if(arr[j]>arr[j+1]){
+            v=false;
+        for(int j=0;j<s-i-1;j++){
+            if (arr[j]>arr[j+1]){
                 temp=arr[j+1];
                 arr[j+1]=arr[j];
                 arr[j]=temp;
+                v=true;
             }
+            c++;
+        
         }
+        if(v==false){
+            break;
+        }
+        
     }
+    cout<<"counter :"<<c<<endl;
 }
 int main(){
-    int arr[5]={7,2,9,6,4};
+    int arr[5]={1,2,3,4,5};
     bubble(arr,5);
-    for(int i=0;i<5;i++){
+    for (int i=0;i<5;i++){
         cout<<arr[i]<<endl;
     }
 }
+
+

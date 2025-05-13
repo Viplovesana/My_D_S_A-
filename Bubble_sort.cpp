@@ -138,6 +138,18 @@
 
 #include<iostream>
 using namespace std;
+void bubble(int arr[],int s){
+    int temp;
+    for(int i=0;i<s;i++){
+        for(int j=0;j<s-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                temp=arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+}
 int main(){
     int s;
     cout<<"enter the size of an array"<<endl;
@@ -146,6 +158,11 @@ int main(){
     cout<<"enter "<<s<<" values"<<endl;
     for (int i=0;i<s;i++){
         cin>>arr[i];
+    }
+    bubble(arr,s);
+    cout<<"after :"<<endl;
+    for (int i=0;i<s;i++){
+        cout<<arr[i]<<endl;
     }
    
 }  

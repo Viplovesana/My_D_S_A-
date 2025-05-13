@@ -101,36 +101,55 @@
 //     }
 // }
 
+// #include<iostream>
+// using namespace std;
+// void bubble(int arr[],int s){
+//     int temp,c=0;
+//     bool d;
+//     for(int i=0;i<s;i++){
+//         d=false;
+//         for(int j=0;j<s-i-1;j++){
+//              c++; 
+//             if(arr[j]>arr[j+1]){    
+//              temp=arr[j+1];
+//              arr[j+1]=arr[j];
+//              arr[j]=temp; 
+//              d=true ;   
+//             }  
+//         }
+//        if(d==false){
+//         break;
+//        } 
+//     }
+//     cout<<"counter hit :"<<c<<endl;
+// }
+// int main(){
+//     int arr[5]={9,3,17,8,6};
+//     bubble(arr,5);
+//     for (int i=0;i<5;i++){
+//         cout<<arr[i]<<endl;
+//     }
+
+// }
+
+
+
+//.................BUBBLE sort by user input.......................//
+
 #include<iostream>
 using namespace std;
-void bubble(int arr[],int s){
-    int temp,c=0;
-    bool d;
-    for(int i=0;i<s;i++){
-        d=false;
-        for(int j=0;j<s-i-1;j++){
-             c++; 
-            if(arr[j]>arr[j+1]){    
-             temp=arr[j+1];
-             arr[j+1]=arr[j];
-             arr[j]=temp; 
-             d=true ;   
-            }  
-        }
-       if(d==false){
-        break;
-       } 
-    }
-    cout<<"counter hit :"<<c<<endl;
-}
 int main(){
-    int arr[5]={9,3,17,8,6};
-    bubble(arr,5);
-    for (int i=0;i<5;i++){
-        cout<<arr[i]<<endl;
+    int s;
+    cout<<"enter the size of an array"<<endl;
+    cin>>s;
+    int arr[s];
+    cout<<"enter "<<s<<" values"<<endl;
+    for (int i=0;i<s;i++){
+        cin>>arr[i];
     }
+   
+}  
 
-}
 
 
 

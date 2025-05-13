@@ -134,21 +134,29 @@
 
 
 
-//.................BUBBLE sort by user input.......................//
+//.................BUBBLE sort by userinput and optimization.......................//
 
 #include<iostream>
 using namespace std;
 void bubble(int arr[],int s){
-    int temp;
+    int temp,c=0;
+    bool x;
     for(int i=0;i<s;i++){
+        x=false;
         for(int j=0;j<s-i-1;j++){
+            c++;
             if(arr[j]>arr[j+1]){
                 temp=arr[j+1];
                 arr[j+1]=arr[j];
                 arr[j]=temp;
+                x=true;
             }
         }
+        if(x==false){
+            break;
+        }
     }
+    cout<<"counter hit :"<<c<<endl;
 }
 int main(){
     int s;

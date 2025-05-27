@@ -134,48 +134,131 @@
 
 
 
-//.................BUBBLE sort by userinput and optimization.......................//
+//.................BUBBLE sort by userinput and optimization  .......................//
+
+// #include<iostream>
+// using namespace std;
+// void bubble(int arr[],int s){
+//     int temp,c=0;
+//     bool x;
+//     for(int i=0;i<s;i++){
+//         x=false;
+//         for(int j=0;j<s-i-1;j++){
+//             c++;
+//             if(arr[j]>arr[j+1]){
+//                 temp=arr[j+1];
+//                 arr[j+1]=arr[j];
+//                 arr[j]=temp;
+//                 x=true;
+//             }
+//         }
+//         if(x==false){
+//             break;
+//         }
+//     }
+//     cout<<"counter hit :"<<c<<endl;
+// }
+// int main(){
+//     int s;
+//     cout<<"enter the size of an array"<<endl;
+//     cin>>s;
+//     int arr[s];
+//     cout<<"enter "<<s<<" values"<<endl;
+//     for (int i=0;i<s;i++){
+//         cin>>arr[i];
+//     }
+//     bubble(arr,s);
+//     cout<<"after :"<<endl;
+//     for (int i=0;i<s;i++){
+//         cout<<arr[i]<<endl;
+//     }
+   
+// }  
+
+//.............WAP if arr is 0 then show invalid.........................//
+
+// #include<iostream>
+// using namespace std;
+// void bubble(int arr[],int x){
+//     int temp,c=0;
+//     for (int i=0;i<x;i++){
+//         c++;
+//         for (int j=0;j<x-i-1;j++){
+//             if(arr[j]>arr[j+1]){
+//                 temp=arr[j+1];
+//                 arr[j+1]=arr[j];
+//                 arr[j]=temp;
+//             }
+//         }
+    
+//     }
+
+//     cout<<"count"<<c<<endl;
+
+// }
+// int main(){
+//     int x;
+//     cout<<"enter the size of an array :"<<endl;
+//     cin>>x;
+//      if(x<1){
+//             cout<<"the size of an array is invalid"<<endl;
+//             return 0;
+//         }
+//         else if(x<2){
+//             cout<<"at least the size of an array will be two"<<endl;
+//             return 0;
+//         }
+//         else if(x>10){
+//             cout<<"overflow of an array"<<endl;
+//             return 0;
+//         }
+//     int arr[x];
+//     cout<<"enter "<<x<<" values"<<endl;
+//     for (int i=0;i<x;i++){
+//         cin>>arr[i];
+//     }
+//     bubble(arr,x);
+//     cout<<"sorted array!" << endl;
+    
+//     for(int i=0;i<x;i++){
+//         cout<<arr[i]<<endl;
+//     } 
+  
+// }
+
+
+
+//.........................................INSERTION SORT....................................................
+
+
 
 #include<iostream>
 using namespace std;
-void bubble(int arr[],int s){
-    int temp,c=0;
-    bool x;
-    for(int i=0;i<s;i++){
-        x=false;
-        for(int j=0;j<s-i-1;j++){
-            c++;
-            if(arr[j]>arr[j+1]){
-                temp=arr[j+1];
-                arr[j+1]=arr[j];
-                arr[j]=temp;
-                x=true;
-            }
-        }
-        if(x==false){
-            break;
-        }
-    }
-    cout<<"counter hit :"<<c<<endl;
+int main()
+{
+
+int arr[]={8,9,6,5,3};
+int s=sizeof(arr)/sizeof(arr[0]);
+for(int i=0;i<s;i++)
+{
+    cout<<arr[i]<<endl;
 }
-int main(){
-    int s;
-    cout<<"enter the size of an array"<<endl;
-    cin>>s;
-    int arr[s];
-    cout<<"enter "<<s<<" values"<<endl;
-    for (int i=0;i<s;i++){
-        cin>>arr[i];
-    }
-    bubble(arr,s);
-    cout<<"after :"<<endl;
-    for (int i=0;i<s;i++){
-        cout<<arr[i]<<endl;
-    }
-   
-}  
+for (int i=0;i<s;i++)
+{
+for (int j=0;j<i;j++)
+{
+if (arr[j]<arr[j-1])
+{
+    int sw;
+    sw=arr[j-1];
+    arr[j-1]=arr[j];
+    arr[j]=sw;
+}    
+}
+    
+}
 
 
-
+}
 
 

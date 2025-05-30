@@ -237,7 +237,7 @@ using namespace std;
 int main()
 {
 int c=0;
-int arr[]={1,3,2,4,5};
+int arr[]={1,3,2,4,5 };
 int s=sizeof(arr)/sizeof(arr[0]);
 for(int i=0;i<s;i++)
 {

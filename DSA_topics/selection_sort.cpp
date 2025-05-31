@@ -5,7 +5,7 @@ int main()
 {
 int arr[]={3,14,2,5,7};
 int s=sizeof(arr)/sizeof(arr[0]);
-
+       qedsre  \
 for(int i=0;i<s;i++)
 {
 cout<<arr[i]<<endl;

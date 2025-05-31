@@ -231,30 +231,32 @@
 using namespace std;
 void bubble(int arr[],int s)
 {
-    int temp;
-    for(int i=0;i<s;i++)
+    int temp,c=0;
+    
+    for (int i=0;i<s;i++)
     {
-        for(int j=0;j<s-i-1;j++)
+        for (int j=0;j<s-i-1;j++)
         {
+            c++;
             if(arr[j]>arr[j+1])
             {
                 temp=arr[j+1];
                 arr[j+1]=arr[j];
                 arr[j]=temp;
-            }   
-        }  
+
+            }        
+        } 
     }
+    cout<<"counter hit "<<c<<endl;
 }
 int main()
 {
-int arr[5]={3,6,9,1,2};
-bubble(arr,5);
-{
-    cout<<"after"<<endl;
-}
-for (int i=0;i<5;i++){
-    cout<<arr[i]<<endl;
-}
+    int arr[6]={3,5,2,7,9,2,};
+    bubble (arr,6);
+    for(int i=0;i<6;i++)
+    {
+        cout<<arr[i]<<endl;
+    }
 }
 
 

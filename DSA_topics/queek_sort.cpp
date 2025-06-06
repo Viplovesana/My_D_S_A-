@@ -135,20 +135,19 @@ int partfun(int arr[],int low ,int high)
             arr[i]=swp;
         }
     }
-    while(i<j){
-        swp=arr[j];
-        arr[j]=pvt;
-        pvt=swp;
-        returnj;
-    }
+    while(i<j);
+    swp=arr[j];
+    arr[j]=pvt;
+    pvt=swp;
+    return j;
 }
 void Quicksort(int arr[],int low,int high)
 {
     int pivot;
     if(low<high){
         pivot=partfun(arr,low,high);
-        
-
+        Quicksort(arr,low,pivot-1);
+        Quicksort(arr,pivot+1,high);
     }
 }
 int main()
@@ -159,13 +158,12 @@ int main()
     int arr[s];
     cout<<"Enter "<<s<<" values"<<endl;
     for(int i=0;i<s;i++){
-        cin>>arr[s];
+        cin>>arr[i];
     }
     Quicksort(arr,0,s-1);
     cout<<"After sorted Array"<<endl;
 
     for(int i=0;i<s;i++){
         cout<<arr[i]<<endl;     
-    }
-    
+    }   
 }

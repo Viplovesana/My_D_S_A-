@@ -115,6 +115,42 @@
 
 #include<iostream>
 using namespace std;
+int partfun(int arr[],int low ,int high)
+{
+    int pvt = arr[low];
+    int i = low+1;
+    int j =high;
+    int swp;
+    
+    do{
+        while(arr[i]<pvt){
+            i++;
+        }
+        while(arr[j]>pvt){
+            j--;
+        }
+        if(i<j){
+            swp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=swp;
+        }
+    }
+    while(i<j){
+        swp=arr[j];
+        arr[j]=pvt;
+        pvt=swp;
+        returnj;
+    }
+}
+void Quicksort(int arr[],int low,int high)
+{
+    int pivot;
+    if(low<high){
+        pivot=partfun(arr,low,high);
+        
+
+    }
+}
 int main()
 {
     int s;
@@ -127,5 +163,9 @@ int main()
     }
     Quicksort(arr,0,s-1);
     cout<<"After sorted Array"<<endl;
+
+    for(int i=0;i<s;i++){
+        cout<<arr[i]<<endl;     
+    }
     
 }

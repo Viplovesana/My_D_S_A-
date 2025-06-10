@@ -264,50 +264,83 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+// void bubble(int arr[],int x)
+// {
+//     int temp,c=0;
+//     bool y;
+//     for(int i=0;i<x;i++)
+//     {
+//         y=false;
+//         for (int j=0;j<x-i-1;j++)
+//         {
+//             c++;
+//             if(arr[j]>arr[j+1])
+//             {
+//                 temp=arr[j+1];
+//                 arr[j+1]=arr[j];
+//                 arr[j]=temp;
+//                 y=true;
+//             }
+//         }
+//         if(y==false){
+//             break;
+//         }
+//     }
+//     cout<<"count hit"<<c<<endl;
+// }
+// int main()
+// {
+//     int x;
+//     cout<<"Enter the size of an array"<<endl;
+//     cin>>x;
+//     int arr[x];
+//     cout <<"Enter "<<x<<" value"<<endl;
+//     for (int i=0;i<x;i++)
+//     {
+//         cin>>arr[i];
+//     }
+//      bubble(arr,x);
+//     cout<<"sorted array"<<endl;
+//     for (int i=0;i<x;i++)
+//     {
+//         cout<<arr[i]<<endl;
+//     }
+//............................................................
+
 #include<iostream>
 using namespace std;
-void bubble(int arr[],int x)
+void bubble(int arr[],int s)
 {
-    int temp,c=0;
-    bool y;
-    for(int i=0;i<x;i++)
-    {
-        y=false;
-        for (int j=0;j<x-i-1;j++)
-        {
+    int tmp,c=0;
+    for (int i=0;i<s;i++){
+        for(int j=0;j<s-i-1;j++){
             c++;
-            if(arr[j]>arr[j+1])
-            {
-                temp=arr[j+1];
+            if (arr[j]>arr[j+1]){
+                tmp=arr[j+1];
                 arr[j+1]=arr[j];
-                arr[j]=temp;
-                y=true;
+                arr[j]=tmp;
             }
         }
-        if(y==false){
-            break;
-        }
     }
-    cout<<"count hit"<<c<<endl;
+    cout<<"counter hit "<<c<<endl;
 }
 int main()
 {
-    int x;
-    cout<<"Enter the size of an array"<<endl;
-    cin>>x;
-    int arr[x];
-    cout <<"Enter "<<x<<" value"<<endl;
-    for (int i=0;i<x;i++)
-    {
-        cin>>arr[i];
+    int arr[]={10,8,4,9,2,6};
+    int s=sizeof(arr)/sizeof(arr[0]);
+    for (int i=0;i<s;i++){
+        cout<<arr[i]<<endl;
     }
-     bubble(arr,x);
-    cout<<"sorted array"<<endl;
-    for (int i=0;i<x;i++)
-    {
+    bubble(arr,s);
+    cout<<"After bubble sort"<<endl;
+    for (int i=0;i<s;i++){
         cout<<arr[i]<<endl;
     }
 }
+
+
 
 
 

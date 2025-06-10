@@ -62,6 +62,15 @@
 
 #include<iostream>
 using namespace std;
+void mergesort(int arr[],int low ,int high){
+    int mid;
+    if(low<high){
+        mid=(low+high)/2;
+        mergesort(arr,low,mid);
+        mergesort(arr,mid+1,high);
+        merges(arr,low,mid,high);
+    }
+}
 int main (){
     int arr[]={10,3,6,9,3,6,};
     int s=sizeof(arr)/sizeof(arr[0]);

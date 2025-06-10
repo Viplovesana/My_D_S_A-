@@ -76,7 +76,7 @@ void merges(int arr[],int low,int mid,int high){
             b[k]=arr[j];
             j++;
         }
-        k++
+        k++;
     }
     while(i<=mid){
         b[k]=arr[i];
@@ -88,7 +88,7 @@ void merges(int arr[],int low,int mid,int high){
             j++;
             k++;
     }
-    for (int i=low;i<high;i++){
+    for (int i=low;i<=high;i++){
         arr[i]=b[i];
     }
 }
@@ -104,7 +104,7 @@ void mergesort(int arr[],int low ,int high){
 int main (){
     int arr[]={10,3,6,9,3,6,};
     int s=sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i<s;i++)l;
+    for(int i=0;i<s;i++)
     {
         cout<<arr[i]<<endl;
     }

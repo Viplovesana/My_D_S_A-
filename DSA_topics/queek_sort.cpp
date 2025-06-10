@@ -178,7 +178,7 @@
 //..................................................................................................
 
 // #include<iostream>
-// using namespace std;
+// using namespace std;   
 // int partfun(int arr[],int low ,int high)
 // {
 //     int pvt=arr[low];
@@ -232,3 +232,51 @@
 //         cout<<arr[i]<<endl;
 //     }
 // }
+//.............................................................
+
+#include <iostream>
+using namespace std;
+int partfun(int arr[],int low,int high){
+    int pvt=arr[low];
+    int i=low+1;
+    int j=high;
+    int swp;
+    do{
+        while(arr[i]<pvt){
+            i++;
+        }
+        while(arr[j]>pvt){
+            j--;
+        }
+        if(i<j){
+            swp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=swp;
+        }
+    }
+    while(i<j);
+        swp=arr[j];
+        arr[j]=arr[low];
+        arr[low]=swp;
+        return j;
+}
+void Quicksort(int arr[],int low ,int high){
+    int pivot;
+    if (low<high){
+        pivot=partfun(arr,low,high);
+        Quicksort(arr,low,pivot-1);
+        Quicksort(arr,pivot+1,high);
+    }
+}
+int main(){
+    int arr[]={10,4,8,2,7,9,4};
+    int s=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<s;i++){
+        cout <<arr[i]<<endl;
+    }
+    Quicksort(arr,0,s-1);
+    cout<<"after quicksort"<<endl;
+      for(int i=0;i<s;i++){
+        cout <<arr[i]<<endl;
+    }
+}

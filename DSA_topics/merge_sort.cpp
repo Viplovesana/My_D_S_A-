@@ -1,7 +1,7 @@
 
 #include<iostream>
 using namespace std;
-void merges(int arr[],int low,int high)
+void merges(int arr[],int low,int mid,int high)
 {
     int b[high+1];
     int i=low;
@@ -34,6 +34,9 @@ while(j<=high)
     k++;
 }
 for(int i=low;i<=high;i++)
+{
+arr[i]=b[i];
+}
 }
 
 void mergesort(int arr[],int low, int high)
@@ -41,19 +44,19 @@ void mergesort(int arr[],int low, int high)
     int mid;
     if(low<high){
         mid=(low+high)/2;
-        mergesort(arr,low,high);
+        mergesort(arr,low,mid);
         mergesort(arr,mid+1,high);
         merges(arr,low,mid,high);
     }
 }
 int main()
 {
-    int arr[]={5,9,2,6,9,4,6};
+    int arr[]={6,8,1,2,4,3,5,9};
     int s=sizeof(arr)/sizeof(arr[0]);
     for(int i=0;i<s;i++){
         cout<<arr[i]<<endl;
     }
-    mergesort(arr,0,size-1):
+    mergesort(arr,0,s-1);
     cout<<"After mergesort"<<endl;
     for (int i=0;i<s;i++){
         cout<<arr[i]<<endl;

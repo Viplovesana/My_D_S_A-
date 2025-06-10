@@ -177,58 +177,58 @@
 
 //..................................................................................................
 
-#include<iostream>
-using namespace std;
-int partfun(int arr[],int low ,int high)
-{
-    int pvt=arr[low];
-    int i=low+1;
-    int j=high;
-    int swp;
+// #include<iostream>
+// using namespace std;
+// int partfun(int arr[],int low ,int high)
+// {
+//     int pvt=arr[low];
+//     int i=low+1;
+//     int j=high;
+//     int swp;
 
-    do{
-        while(arr[i]<pvt){
-            i++;
-        }
-        while(arr[j]>pvt){
-            j--;
-        }
-        if(i<j){
-            swp=arr[j];
-            arr[j]=arr[i];
-            arr[i]=swp;
-        }
-    }
-    while(i<j);
-    swp=arr[j];
-    arr[j]=arr[low];
-    arr[low]=swp;
-    return j;
+//     do{
+//         while(arr[i]<pvt){
+//             i++;
+//         }
+//         while(arr[j]>pvt){
+//             j--;
+//         }
+//         if(i<j){
+//             swp=arr[j];
+//             arr[j]=arr[i];
+//             arr[i]=swp;
+//         }
+//     }
+//     while(i<j);
+//     swp=arr[j];
+//     arr[j]=arr[low];
+//     arr[low]=swp;
+//     return j;
     
-}
-void qksort(int arr[],int low ,int high)
-{
-    int pivot;
-    if(low<high){
-        pivot=partfun(arr,low,high);
-        qksort(arr,low,pivot-1);
-        qksort(arr,pivot+1,high);
-    }
-}
-int main()
-{
-    int s;
-    cout<<"Enter the size of an Array : "<<endl;
-    cin>>s;
-    int arr[s];
-    cout <<"Enter "<<s<<" values"<<endl;
-    for(int i=0;i<s;i++)
-    {
-        cin>>arr[i];
-    }
-    qksort(arr,0,s-1);
-    cout<<"After sorted Array"<<endl;
-    for (int i=0;i<s;i++){
-        cout<<arr[i]<<endl;
-    }
-}
+// }
+// void qksort(int arr[],int low ,int high)
+// {
+//     int pivot;
+//     if(low<high){
+//         pivot=partfun(arr,low,high);
+//         qksort(arr,low,pivot-1);
+//         qksort(arr,pivot+1,high);
+//     }
+// }
+// int main()
+// {
+//     int s;
+//     cout<<"Enter the size of an Array : "<<endl;
+//     cin>>s;
+//     int arr[s];
+//     cout <<"Enter "<<s<<" values"<<endl;
+//     for(int i=0;i<s;i++)
+//     {
+//         cin>>arr[i];
+//     }
+//     qksort(arr,0,s-1);
+//     cout<<"After sorted Array"<<endl;
+//     for (int i=0;i<s;i++){
+//         cout<<arr[i]<<endl;
+//     }
+// }

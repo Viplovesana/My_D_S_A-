@@ -26,16 +26,28 @@
 
 //*Two parameter template function */
 
+// #include <iostream>
+// using namespace std;
+// template <class a ,class b>
+// void sum(a x1 ,b x2)
+// {
+//     cout<< x1+x2;
+// }
+// int main()
+// {
+// sum (12,4.5);
+// }
+
+//*Two parameter template function with return type function */
+
 #include <iostream>
 using namespace std;
-template <class a ,class b>
-void sum(a x1 ,b x2)
+template <class a, class b>
+a sum (a x1 ,b x2)
 {
-    cout<< x1+x2;
+    return x1 + x2;
 }
 int main()
 {
-sum (12,4.5);
+   cout<< sum(2,8.4);
 }
-
-

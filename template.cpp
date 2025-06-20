@@ -9,14 +9,33 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+// template <class a>   //class is use to change the datatype
+// a increament (a val)
+// {
+//     return val+1;
+// }
+// int main()
+// {
+//    cout<<increament(80.1);
+// }
+
+
+
+
+//*Two parameter template function */
+
 #include <iostream>
 using namespace std;
-template <class a>
-a increament (a val)
+template <class a ,class b>
+void sum(a x1 ,b x2)
 {
-    return val+1;
+    cout<< x1+x2;
 }
 int main()
 {
-   cout<<increament(80);
+sum (12,4.5);
 }
+
+

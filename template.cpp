@@ -7,8 +7,6 @@
 //1 class template
 //2 function template 
 
-
-
 // #include <iostream>
 // using namespace std;
 // template <class a>   //class is use to change the datatype
@@ -20,8 +18,6 @@
 // {
 //    cout<<increament(80.1);
 // }
-
-
 
 
 //*Two parameter template function */
@@ -51,37 +47,27 @@
 // {
 //    cout<< sum(2,8.4);
 // }
-
-
-
 //..........................................................................................
-
-
-
 //********.........................class template........................
 
 
-#include <iostream>
-using namespace std ;
-template <class obj>
-class Job{
-    public:
-    obj v;    
-    Job(obj val)
-    {
-        v=val;
-        cout<<"value ="<<v;
-    }
-};   
-int main()
-{
-Job<float>j(20);
-}
-
-
+// #include <iostream>
+// using namespace std ;
+// template <class obj>
+// class Job{
+//     public:
+//     obj v;    
+//     Job(obj val)
+//     {
+//         v=val;
+//         cout<<"value ="<<v;
+//     }
+// };   
+// int main()
+// {
+// Job<float>j(20);
+// }
 //......class templating with two parameter..........//
-
-
 #include <iostream>
 using namespace std;
 template <class obj1,class obj2>
@@ -95,4 +81,7 @@ class Tempalte{
         v2=val2;
         cout<<"value ="<<v1+v2;
     }
+};
+int main(){
+    Tempalte<float ,float >j(18.5,25);
 }

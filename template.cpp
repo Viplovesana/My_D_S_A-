@@ -68,20 +68,33 @@
 // Job<float>j(20);
 // }
 //......class templating with two parameter..........//
+// #include <iostream>
+// using namespace std;
+// template <class obj1,class obj2>
+
+// class Tempalte{
+//     public:
+//     obj1 v1;
+//     obj2 v2;
+//     Tempalte(obj1 val1,obj2 val2){
+//         v1=val1;
+//         v2=val2;
+//         cout<<"value ="<<v1+v2;
+//     }
+// };
+// int main(){
+//     Tempalte<float ,float >j(18.5,25);
+// }
+//...................
 #include <iostream>
 using namespace std;
 template <class obj1,class obj2>
-
 class Tempalte{
-    public:
-    obj1 v1;
-    obj2 v2;
-    Tempalte(obj1 val1,obj2 val2){
-        v1=val1;
-        v2=val2;
+    obj1 v1 ;
+    obj2 v2 ;
+    Tempalte(obj val1,obj val2){
+        v1 = val1;
+        v2 = val2;
         cout<<"value ="<<v1+v2;
     }
 };
-int main(){
-    Tempalte<float ,float >j(18.5,25);
-}

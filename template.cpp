@@ -40,14 +40,40 @@
 
 //*Two parameter template function with return type function */
 
+// #include <iostream>
+// using namespace std;
+// template <class a, class b>
+// a sum (a x1 ,b x2)
+// {
+//     return x1 + x2;
+// }
+// int main()
+// {
+//    cout<< sum(2,8.4);
+// }
+
+
+
+//..........................................................................................
+
+
+
+//********.........................class template........................
+
+
 #include <iostream>
-using namespace std;
-template <class a, class b>
-a sum (a x1 ,b x2)
-{
-    return x1 + x2;
-}
+using namespace std ;
+template <class obj>
+class Job{
+    public:
+    obj v;    
+    Job(obj val)
+    {
+        v=val;
+        cout<<"value ="<<v;
+    }
+};   
 int main()
 {
-   cout<< sum(2,8.4);
+Job<float>j(20);
 }

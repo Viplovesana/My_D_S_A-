@@ -96,9 +96,14 @@ class Job{
 public:Job(obj1 val1,obj1 val2){
         v1 = val1;
         v2 = val2;
-        cout<<"value ="<<v1+v2;
+        cout<<"value ="<<v1+v2<<endl;
     }
+show(){
+    cout<<"value of v1 ="<<v1<<endl;
+    cout<<"value of v2 ="<<v2<<endl;
+}    
 };
 int main(){
 Job<float,float>j(52,42.2);
+j.show();
 }

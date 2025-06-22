@@ -91,9 +91,10 @@ using namespace std;
 template <class obj1,class obj2>
 
 class Job{
-    obj1 v1 ;
-    obj2 v2 ;
-public:Job(obj1 val1,obj1 val2){
+    public:
+    obj1 v1 ;  //v1 is a type of obj1
+    obj2 v2 ;  //..............
+Job(obj1 val1,obj2 val2){
         v1 = val1;
         v2 = val2;
         cout<<"value ="<<v1+v2<<endl;

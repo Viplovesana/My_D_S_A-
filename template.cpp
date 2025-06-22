@@ -77,3 +77,11 @@ int main()
 {
 Job<float>j(20);
 }
+
+
+//......class templating with two parameter..........//
+
+
+#include <iostream>
+using namespace std;
+template <class obj1,class obj2>

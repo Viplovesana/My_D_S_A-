@@ -34,11 +34,24 @@ namespace cybrom
     int b =20;
     //any funtion:-
     multiply(){
-        cout<<"this is my namespace"<<endl;
+        cout<<"multiply of a*b :"<<endl;
     }
 }
+class Bhopal
+{
+public:
+    int k1;
+    int k2;
+    
+}vip;
+using namespace cybrom;
 int main()
 {
     cout<<"sum of a+b = "<<cybrom::a+cybrom::b<<endl;
     cybrom::multiply();
+    vip.k1=300;
+    vip.k2=400;
+    cout<<"value of k1"<<vip.k1<<endl;
+    cout<<"value of k1"<<vip.k2<<endl;
+    cout<<b;
 }

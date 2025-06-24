@@ -37,6 +37,13 @@ namespace cybrom
         cout<<"multiply of a*b :"<<endl;
     }
 }
+namespace mpnagar
+{
+    multiply()
+    {
+        cout<<"this my dsa practice";
+    }
+}
 class Bhopal
 {
 public:
@@ -53,5 +60,6 @@ int main()
     vip.k2=400;
     cout<<"value of k1"<<vip.k1<<endl;
     cout<<"value of k1"<<vip.k2<<endl;
-    cout<<b;
+    cout<<b<<endl;
+    mpnagar::multiply();
 }

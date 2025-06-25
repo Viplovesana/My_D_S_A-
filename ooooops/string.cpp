@@ -20,3 +20,14 @@ using namespace std;
 //         j.resize(3);    //.resize will cretae the size of the array
 //         cout<<"j = "<<j<<endl;       
 //     }
+int main()
+{
+    string j="12345";
+    cout<<j<<endl;
+    string S= "cybrombhopal";
+    cout<<S<<endl;
+    cout<<S.find("rom")<<endl;
+    cout<<S.back()<<endl;
+    cout<<S.front()<<endl;
+    cout<<j+S;
+}

@@ -38,5 +38,8 @@ int main()
     
     j.insert(2,"hello");
     cout<<"new j ="<<j<<endl;//it will insert between or insert anywhere in the index
+    
+    string h ="mpnagar";
+    cout<<"h = "<<h<<endl;
 
 }

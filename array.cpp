@@ -15,6 +15,31 @@ int main()
  cout<<"array 2 values"<<endl;
  for(int i=0;i<a2.size();i++)
  {
-   cout<<a2.at(i)"\t";
+   cout<<a2.at(i)<<"\t";
+ }
+ a.swap(a2);
+ cout<<"\n first array\n";
+ for(int i=0;i<a.size();i++)
+ {
+   cout<<a.at(i)<<"\t";
+ }
+ cout<<"\n second array\n";
+ for(int i=0;i<a2.size();i++)
+ {
+   cout<<a2.at(i)<<"\t";
+ }
+ a2.fill(100);
+ cout<<"\n second array\n";
+ for (int i=0;i<a2.size();i++)
+ {
+   cout<<a2.at(i)<<"\t";
+ }
+ if(a2.empty())
+ {
+   cout<<"array is empty()";
+ }
+ else
+ {
+   cout<<"array is not empty()";
  }
 }

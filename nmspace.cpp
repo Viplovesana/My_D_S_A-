@@ -26,40 +26,73 @@
 // }       
 
 
+// #include <iostream>
+// using namespace std;
+// namespace cybrom
+// {
+//     int a =10;
+//     int b =20;
+//     //any funtion:-
+//     multiply(){
+//         cout<<"multiply of a*b :"<<endl;
+//     }
+// }
+// namespace mpnagar
+// {
+//     multiply()
+//     {
+//         cout<<"this my dsa practice";
+//     }
+// }
+// class Bhopal
+// {
+// public:
+//     int k1;
+//     int k2;
+    
+// }vip;
+// using namespace cybrom;
+// int main()
+// {
+//     cout<<"sum of a+b = "<<cybrom::a+cybrom::b<<endl;
+//     cybrom::multiply();
+//     vip.k1=300;
+//     vip.k2=400;
+//     cout<<"value of k1"<<vip.k1<<endl;
+//     cout<<"value of k1"<<vip.k2<<endl;
+//     cout<<b<<endl;
+//     mpnagar::multiply();
+// }
+
+
 #include <iostream>
 using namespace std;
 namespace cybrom
 {
     int a =10;
     int b =20;
-    //any funtion:-
     multiply(){
-        cout<<"multiply of a*b :"<<endl;
+        cout<<a*b<<endl;
     }
 }
-namespace mpnagar
-{
+namespace mpnagar{
     multiply()
     {
-        cout<<"this my dsa practice";
+        cout<<"multiply"<endl;
     }
 }
-class Bhopal
-{
+
+class Job{
 public:
     int k1;
-    int k2;
-    
-}vip;
+}obj;
+
 using namespace cybrom;
 int main()
 {
-    cout<<"sum of a+b = "<<cybrom::a+cybrom::b<<endl;
-    cybrom::multiply();
-    vip.k1=300;
-    vip.k2=400;
-    cout<<"value of k1"<<vip.k1<<endl;
-    cout<<"value of k1"<<vip.k2<<endl;
-    cout<<b<<endl;
+    cout<<a+b<<endl;
+    multiply();
     mpnagar::multiply();
+    obj.k1=300;
+    cout<<obj.k1;  
 }

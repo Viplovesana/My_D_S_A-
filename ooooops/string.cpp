@@ -24,10 +24,19 @@ int main()
 {
     string j="12345";
     cout<<j<<endl;
+
     string S= "cybrombhopal";
     cout<<S<<endl;
     cout<<S.find("rom")<<endl;
+
     cout<<S.back()<<endl;
     cout<<S.front()<<endl;
-    cout<<j+S;
+    cout<<j+S<<endl;
+
+    j.append(S);//both j and S will merge together
+    cout<<"j="<<j<<endl;
+    
+    j.insert(2,"hello");
+    cout<<"new j ="<<j<<endl;//it will insert between or insert anywhere in the index
+
 }

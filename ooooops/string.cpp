@@ -41,5 +41,10 @@ int main()
     
     string h ="mpnagar";
     cout<<"h = "<<h<<endl;
+    h.erase(2,3);
+    cout<<"after erase value = "<<h<<endl;
+    h.clear();
+    cout<<h;
+
 
 }

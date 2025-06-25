@@ -41,7 +41,7 @@ int main()
     
     string h ="mpnagar";
     cout<<"h = "<<h<<endl;
-    h.erase(2,3);
+    h.erase(2,3);//it will erase the value between the index
     cout<<"after erase value = "<<h<<endl;
     h.clear();
     cout<<h;

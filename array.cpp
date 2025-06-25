@@ -10,4 +10,11 @@ int main()
  {
     cout<<a.at(i)<<endl;
  }
+ cout<<"first value of array = "<<a.front()<<endl;
+ cout<<"last value of array = "<<a.back()<<endl;
+ cout<<"array 2 values"<<endl;
+ for(int i=0;i<a2.size();i++)
+ {
+   cout<<a2.at(i)"\t";
+ }
 }

@@ -51,13 +51,23 @@
 
 // ..........................Assignnment..............................//
 
+//......WAP where the string is ANAGRAM or not.................
+
 #include <iostream>
 using namespace std;
-#include <algorithm>
-#include <string>
 int main()
 {
-   string S = "Cybrom";
-   reverse(S.begin(),S.end());
-   cout<<"reverse of Cybrom = "<<S<<"\t";
+  
+ char s1 [10]='listen';
+ char s2 [10]='silents';
+ int c[26] ={0};
+ for (int i=0;s1[i]!='\0';i++)
+ {
+   c[s1[i]-'s']++;
+ } 
+for (int i=0;s2[i]!='\0';i++)
+{
+   c[s2[i]-'a']--;
+}
+   
 }

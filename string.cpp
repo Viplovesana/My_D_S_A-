@@ -59,11 +59,11 @@ int main()
 {
   
  char s1 [10]="listen";
- char s2 [10]="silents";
+ char s2 [10]="silent";
  int c[26] ={0};
  for (int i=0;s1[i]!='\0';i++)
  {
-   c[s1[i]-'s']++;
+   c[s1[i]-'a']++;
  } 
 for (int i=0;s2[i]!='\0';i++)
 {
@@ -77,7 +77,7 @@ for(int i=0;i<26;i++)
     p=false;
     break;
   }
-}   
+}                
 if(p)
 {
   cout<<"anagram";
@@ -85,5 +85,5 @@ if(p)
 else
 {
   cout<<"not an anagram";
-}
+}      
 }

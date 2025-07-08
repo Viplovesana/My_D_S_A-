@@ -33,6 +33,18 @@ int main()
     {
         cout<<p<<"\t";
     } 
-
+    forward_list<int>f3{100,50,40,13};
+        for (auto p:f3)
+    {
+        cout<<p<<"\t";
+    } 
+    f.sort();
+    f3.sort();
+    f.merge(f3);
+    cout<<"after merge\n";
+      for (auto p:f)
+    {
+        cout<<p<<"\t";
+    }    
 
 }

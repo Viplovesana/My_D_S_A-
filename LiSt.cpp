@@ -16,5 +16,10 @@ int main()
         cout<<p<<"\t";
     }  
     f.pop_front();  
+    cout<<"After deletetion\n";
+       for (auto p:f)
+    {
+        cout<<p<<"\t";
+    } 
 
 }

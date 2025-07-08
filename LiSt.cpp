@@ -21,5 +21,18 @@ int main()
     {
         cout<<p<<"\t";
     } 
+    forward_list<int>f2{30,33,34,30,78};
+         for (auto p:f2)
+    {
+        cout<<p<<"\t";
+    } 
+    f2.sort();
+    f2.unique();
+    cout<<"\n unique value\n";
+         for (auto p:f2)
+    {
+        cout<<p<<"\t";
+    } 
+
 
 }

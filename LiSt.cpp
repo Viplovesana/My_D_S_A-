@@ -1,50 +1,83 @@
-//............forworded_list.........................///
+// //............forworded_list.........................///
+
+
+// #include <iostream>
+// using namespace std;
+// #include<forward_list>
+// int main()
+// {
+//     forward_list<int>f;
+//     f.push_front(20); 
+//     f.push_front(40);
+//     f.push_front(30);
+//     f.push_front(12);
+//     for (auto p:f)
+//     {
+//         cout<<p<<"\t";
+//     }  
+//     f.pop_front();  
+//     cout<<"After deletetion\n";
+//        for (auto p:f)
+//     {
+//         cout<<p<<"\t";
+//     } 
+//     forward_list<int>f2{30,33,34,30,78};
+//          for (auto p:f2)
+//     {
+//         cout<<p<<"\t";
+//     } 
+//     f2.sort();
+//     f2.unique();
+//     cout<<"\n unique value\n";
+//          for (auto p:f2)
+//     {
+//         cout<<p<<"\t";
+//     } 
+//     forward_list<int>f3{100,50,40,13};
+//         for (auto p:f3)
+//     {
+//         cout<<p<<"\t";
+//     } 
+//     f.sort();
+//     f3.sort();
+//     f.merge(f3);
+//     cout<<"after merge\n";
+//       for (auto p:f)
+//     {
+//         cout<<p<<"\t";
+//     }    
+
+// }
 
 
 #include <iostream>
 using namespace std;
-#include<forward_list>
+#include<list>
 int main()
 {
-    forward_list<int>f;
-    f.push_front(20); 
-    f.push_front(40);
-    f.push_front(30);
-    f.push_front(12);
-    for (auto p:f)
+    list<int>l1{20,34,12,78};
+    for(auto p:l1)
     {
         cout<<p<<"\t";
-    }  
-    f.pop_front();  
-    cout<<"After deletetion\n";
-       for (auto p:f)
-    {
-        cout<<p<<"\t";
-    } 
-    forward_list<int>f2{30,33,34,30,78};
-         for (auto p:f2)
-    {
-        cout<<p<<"\t";
-    } 
-    f2.sort();
-    f2.unique();
-    cout<<"\n unique value\n";
-         for (auto p:f2)
-    {
-        cout<<p<<"\t";
-    } 
-    forward_list<int>f3{100,50,40,13};
-        for (auto p:f3)
-    {
-        cout<<p<<"\t";
-    } 
-    f.sort();
-    f3.sort();
-    f.merge(f3);
-    cout<<"after merge\n";
-      for (auto p:f)
-    {
-        cout<<p<<"\t";
-    }    
 
+    }
+    l1.push_front(100);
+    l1.push_back(200);
+    cout<<"\n front data \n";
+    for (auto p:l1)
+    {
+        cout<<p<<"\t";
+    }
+    l1.pop_back();
+    l1.pop_front();
+    cout<<"\npop data\n";
+    for(auto p:l1)
+    {
+        cout<<p<<"\t";
+    }
 }
+
+
+
+
+

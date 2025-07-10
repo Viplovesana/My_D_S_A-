@@ -50,32 +50,60 @@
 // }
 
 
+// #include <iostream>
+// using namespace std;
+// #include<list>
+// int main()
+// {
+//     list<int>l1{20,34,12,78};
+//     for(auto p:l1)
+//     {
+//         cout<<p<<"\t";
+
+//     }
+//     l1.push_front(100);
+//     l1.push_back(200);
+//     cout<<"\n front data \n";
+//     for (auto p:l1)
+//     {
+//         cout<<p<<"\t";
+//     }
+//     l1.pop_back();
+//     l1.pop_front();
+//     cout<<"\npop data\n";
+//     for(auto p:l1)
+//     {
+//         cout<<p<<"\t";
+//     }
+// }
+
+// time complicity of dubli in insertion oreder of n and in deletion order of one (1)
+
+
+// lambda function--it is called single line fuctiob
+
+
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     cout<<[](int a , int b){return a>b;} (4,20);
+// }
+
 #include <iostream>
 using namespace std;
-#include<list>
 int main()
 {
-    list<int>l1{20,34,12,78};
-    for(auto p:l1)
-    {
-        cout<<p<<"\t";
-
-    }
-    l1.push_front(100);
-    l1.push_back(200);
-    cout<<"\n front data \n";
-    for (auto p:l1)
-    {
-        cout<<p<<"\t";
-    }
-    l1.pop_back();
-    l1.pop_front();
-    cout<<"\npop data\n";
-    for(auto p:l1)
-    {
-        cout<<p<<"\t";
-    }
+    auto p=[] (int a ,int b){return a>b ;};
+    cout<<p(7 , 8);
 }
+
+
+
+
+
+
 
 
 

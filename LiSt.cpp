@@ -1,8 +1,8 @@
 // //............forworded_list.........................///
 
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 // #include<forward_list>
 // int main()
 // {
@@ -80,29 +80,74 @@
 // time complicity of dubli in insertion oreder of n and in deletion order of one (1)
 
 
-// lambda function--it is called single line fuctiob
+// lambda function--it is called single line fuction
 
 
 
-// #include <iostream>
+// #include <iostream>          
 // using namespace std;
 // int main()
 // {
 //     cout<<[](int a , int b){return a>b;} (4,20);
 // }
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     auto p=[] (int a ,int b){return a>b ;};
+//     cout<<p(7 , 8);
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     vastor <int>v{4,2,8,9,5};
+//     sort(v.begin(),v.end(), [] (int a, int b) {return a>b;})
+//     for (auto p:v)
+//     {
+//         cout<<p<<"\t";
+//     }
+//     l1.remove(6);
+//     cout<<"\n";
+//     for(auto p:l1)
+//     {
+//     cout<<p<<"\t";
+//     }
+//     l1.remove_if([] (int a) v {return a>6;});
+//     cout<<"\n after removing\n";
+//       for(auto p:l1)
+//     {
+//     cout<<p<<"\t";
+//     }
+    
+
+// }
+
+
+
+// QUEUE AND DQUEUE
+
+// QUEUE is insertedb from the last and take dekletion from the first
+
+#include<queue>
 int main()
 {
-    auto p=[] (int a ,int b){return a>b ;};
-    cout<<p(7 , 8);
+    queue<int>q;
+    q.push(20);
+    q.push(34);
+    q.push(16);
+    q.push(9);
+    q.push(3);
+    cout<<"size="<<q.size()<<"\n";
+    cout<<"last element="<<q.back()<<"\n";
+    while(!q.empty())
+    {
+        cout<<q.front()<<"\n";
+        q.pop();
+    }
 }
-
-
-
-
-
 
 
 

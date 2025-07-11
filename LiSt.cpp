@@ -131,25 +131,53 @@ using namespace std;
 
 // QUEUE is insertedb from the last and take dekletion from the first
 
-#include<queue>
+// #include<queue>
+// int main()
+// {
+//     queue<int>q;
+//     q.push(20);
+//     q.push(34);
+//     q.push(16);
+//     q.push(9);
+//     q.push(3);
+//     cout<<"size="<<q.size()<<"\n";
+//     cout<<"last element="<<q.back()<<"\n";
+//     while(!q.empty())
+//     {
+//         cout<<q.front()<<"\n";
+//         q.pop();
+//     }
+// }
+// Both are fpllowing non cotigues 
+
+#include<deque>
 int main()
 {
-    queue<int>q;
-    q.push(20);
-    q.push(34);
-    q.push(16);
-    q.push(9);
-    q.push(3);
-    cout<<"size="<<q.size()<<"\n";
-    cout<<"last element="<<q.back()<<"\n";
-    while(!q.empty())
+    deque<int>q;
+    q.push_front(20);
+    q.push_front(34);
+    q.push_back(16);
+    q.push_back(9);
+    q.push_front(3);
+    for(auto &p:q)
     {
-        cout<<q.front()<<"\n";
-        q.pop();
+        cout<<p<<"\t";
     }
+       for(auto p=q.begin();p!=q.end();p++)
+    {
+    cout<<*p<<"\t";
+    }
+    cout<<"size="<<q.size()<<"\n";
+    q.pop_front();
+    q.pop_back();
+    // cout<<"last element="<<q.back()<<"\n";
+    // while(!q.empty())
+    // {
+    //     cout<<q.front()<<"\n";
+    //     q.pop();
+    // }
 }
-
-
+      
 
 
 

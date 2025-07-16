@@ -15,4 +15,24 @@ int main(){
     for (auto p:s){
         cout<<p<<"\n";
     }
+    s.erase(456);
+    auto p=s.find(45);
+    if(p!=s.end())
+    {
+        cout<<"found";
     }
+    else
+    {
+        cout<<"not found";
+
+    }
+    cout<<"\n after del\n";
+       for (auto p:s){
+        cout<<p<<"\n";
+    }
+    }
+
+
+    //segmentation fault where the data cannot find
+
+    

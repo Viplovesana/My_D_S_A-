@@ -168,8 +168,9 @@ int main()
     cout<<*p<<"\t";
     }
     cout<<"size="<<q.size()<<"\n";
-    q.pop_front();
-    q.pop_back();
+    // q.pop_front();
+    // q.pop_back();
+    deque<int>::itreator it=q.
     // cout<<"last element="<<q.back()<<"\n";
     // while(!q.empty())
     // {

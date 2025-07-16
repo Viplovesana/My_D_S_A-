@@ -1,6 +1,5 @@
 // Set--      
 
-
 #include<iostream>
 using namespace std;
 #include<set>
@@ -19,7 +18,8 @@ int main(){
     auto p=s.find(45);
     if(p!=s.end())
     {
-        cout<<"found";
+        // cout<<"found";
+        s.erase(p);
     }
     else
     {
@@ -27,7 +27,8 @@ int main(){
 
     }
     cout<<"\n after del\n";
-       for (auto p:s){
+       for (auto p:s)
+       {
         cout<<p<<"\n";
     }
     }
